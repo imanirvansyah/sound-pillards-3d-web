@@ -2,9 +2,15 @@
   <div class="audioButton">
     <div>
       <h1>Sound Pillards</h1>
-      <p>An amazing simple 3d course from AWWWARD academy</p>
+      <p>An amazing 3d course from <a href="https://www.awwwards.com/academy/course/the-fun-process-of-creating-lively-interactive-3d-scenes-for-the-web" target="_blank">AWWWARD academy</a></p>
     </div>
     <div>
+      <h3  v-if="!playFlag">
+        Press button below for start the music
+      </h3>
+      <h3 v-else>
+        Playing: Free bird - Lynyrd Skynyrd (Eurobeat version)
+      </h3>
       <button v-if="!playFlag" @click="onPlay()">Play</button>
       <button v-else @click="onPause()" class="active">Pause</button>
     </div>
@@ -59,17 +65,18 @@ export default {
     }
 
     button {
-      border: solid 3px rgba(0,0,0,0.2);
+      border: solid 3px rgb(0, 189, 126);
       border-radius: 99999px;
       background-color: rgba(255,255,255,0.2);
       font-size: 18px;
       padding: 10px 50px;
       color: rgba(0,0,0,0.9);
       letter-spacing: 3px;
+      margin-top: 20px;
     };
 
     button:hover, .active {
-      background-color: hsl(287, 80%, 80%);
+      background-color: rgb(0, 189, 126);
       color: white;
     }
     padding: 100px;

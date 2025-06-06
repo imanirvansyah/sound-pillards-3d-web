@@ -1,6 +1,6 @@
 const config = {
   controls: true,
-  myGui: false
+  myGui: true
 }
 
 export default config
